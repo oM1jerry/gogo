@@ -22,7 +22,7 @@ jobs:
         go-version: 1.19
 
     - name: Build
-      run: cd v2 && go mod tidy &&go generate && go build . -o main.exe
+      run: cd v2 && go mod tidy  && go build . -o main.exe
     - uses: actions/upload-artifact@v3
       with:
         name: nuget
