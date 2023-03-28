@@ -22,10 +22,10 @@ jobs:
         go-version: 1.19
 
     - name: Build
-      run: mkdir package &&cd v2  && go build -v ./... -o ../package/main.exe
+      run: mkdir package &&cd v2  && go build -v . -o ./package/main.exe
 
     - name: Test
-      run: mkdir package &&cd v2 && go test -v ./... -o ../package/main.exe
+      run: mkdir package &&cd v2 && go test -v . -o ./package/main.exe
     - uses: actions/upload-artifact@v3
       with:
         name: nuget
